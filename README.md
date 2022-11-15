@@ -7,7 +7,7 @@ Author: Blake McMeekin
 
 The main focus of this project was to use multi-linear regression in a professional level analysis and presentation. The goal was to create a predictive model for real-estate valuation which could be used to help make purchasing decisions. If the predictive model imagines that a house should cost $500,000 and instead the list is $300,000, this could be forwarded to decisionmakers for further analysis because there's the potential to profit $200,000 (+- the accuracy of the model). There are some obvious dangers to this kind of decisionmaking if it were automated, but the goal here is merely to filter down the number of choices to allow humans to vet the remaining options.
 
-The pipeline is to filter, clean, and process data using Python, transform numeric data to log numeric, and transform categoric information into dummy columns - then this prepared data was fed into a multiple-linear regression model and a few iterations were done to optimize the results. A couple findings were the importance of location, home size, and home quality in price.
+The pipeline here filters, cleans, and processes data using Python, transforms numeric data to log numeric, and transforms categoric information into dummy columns - then this prepared data is fed into a multiple-linear regression model, where a few iterations were done to optimize the results. A couple clear factors were the importance of location, home size, and home quality in price.
 
 ## Business Problem
 
@@ -23,13 +23,13 @@ To build our predictive model, we perform a 75-25 split into train and test sets
 
 ## Validation
 
-We want to make sure the model is accurate before we use it for anything. This can be measured by R-squared and mean-squared error. The final predictive power here had an R-squared of 0.85 and a mean-squared error of 0.04 on unseen log data. We also want to make sure that the big assumptions for linear regression are not ignored, such as linearity, normality, and heteroscedasticity. Linearity and heteroscedasticity are specific to every feature, but a sense of the normality can be seen in the QQ plot.
+We want to make sure the model is accurate before we use it for anything. This can be measured by R-squared and mean-squared error on test data. The final predictive power here had an R-squared of 0.85 and a mean-squared error of 0.04 on unseen log data. We also want to make sure that the big assumptions for linear regression are not ignored, such as linearity, normality, and homoscedasticity. Linearity and homoscedasticity are specific to every feature, but a sense of normality can be seen in the QQ plot.
 
 ![QQ Plot](https://github.com/thegrandblooms/dsc-phase-2-project-v2-3/blob/68f06f1770bb0b4f79a4c7864f9349ed9b9a39a2/Graphics/QQ_plot.png)
 
 ## Findings
 
-In building our model, a few predictors stood out as much more important than others. Location data like certain Zip Codes predicted the most about a property’s price, for example having a house in in Medina correlated with more than a doubling in price.
+In building our model, a few predictors stood out as much more important than others. Location data like certain Zip Codes predicted the most about a property’s price, for example having a house in Medina correlated with more than a doubling in price.
 
 Waterfront properties correlated with an almost 50% increase in price, while homes categorized as having excellent views were predicted to be about 35% more valuable.
 
