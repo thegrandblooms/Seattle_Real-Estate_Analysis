@@ -1,11 +1,11 @@
 ![Map with Price Data Header](https://github.com/thegrandblooms/dsc-phase-2-project-v2-3/blob/68f06f1770bb0b4f79a4c7864f9349ed9b9a39a2/Graphics/price_map_header.jpg)
-### Seattle Real-Estate Analysis - Data Science, Flatiron, Project 2
+### Seattle Real-Estate Analysis
 
 Author: Blake McMeekin
 
 ## Overview
 
-This is the Q2 project for Flatirong School, with the main focus being multiple-linear regression incorporated into a professional level analysis and presentation. The goal was to create a predictive model for real-estate valuation which could be used to help make purchasing decisions. If the predictive model imagines that a house should cost $500,000 and instead the list is $300,000, this could be forwarded to decisionmakers for further analysis because there's the potential to profit $200,000 (+- the accuracy of the model). There are some obvious dangers to this kind of decisionmaking if it were automated, but the goal here is merely to filter down the number of choices to allow humans to vet the remaining options.
+The main focus of this project was to use multi-linear regression in a professional level analysis and presentation. The goal was to create a predictive model for real-estate valuation which could be used to help make purchasing decisions. If the predictive model imagines that a house should cost $500,000 and instead the list is $300,000, this could be forwarded to decisionmakers for further analysis because there's the potential to profit $200,000 (+- the accuracy of the model). There are some obvious dangers to this kind of decisionmaking if it were automated, but the goal here is merely to filter down the number of choices to allow humans to vet the remaining options.
 
 The pipeline is to filter, clean, and process data using Python, transform numeric data to log numeric, and transform categoric information into dummy columns - then this prepared data was fed into a multiple-linear regression model and a few iterations were done to optimize the results. A couple findings were the importance of location, home size, and home quality in price.
 
@@ -29,15 +29,15 @@ We want to make sure the model is accurate before we use it for anything. This c
 
 ## Findings
 
-In building our model, a few predictors stood out as much more important than others. Location data like certain Zip Codes predicted the most about a property’s price, for example having a house in 98039 (in Medina) correlated with more than a doubling in price.
+In building our model, a few predictors stood out as much more important than others. Location data like certain Zip Codes predicted the most about a property’s price, for example having a house in in Medina correlated with more than a doubling in price.
 
-Waterfront properties correlated with an almost 50% increase in price, while homes categorized as having excellent views were predicted to be about 35% more valuable. In making investments, each of these location considerations should naturally be considered.
+Waterfront properties correlated with an almost 50% increase in price, while homes categorized as having excellent views were predicted to be about 35% more valuable.
 
-Square Footage of living space was perhaps the most stable numeric predictor, with a doubling of square footage representing a 68% increase in predicted property value. Bedrooms, bathrooms, and floors were surprisingly negligible in predicting price, most were later removed from the model to reduce redundant information (multicollinearity).
+Square Footage of living space was perhaps the most consistent numeric predictor, with a doubling of square footage representing a 68% increase in predicted property value. Bedrooms, bathrooms, and floors were surprisingly negligible in predicting price, most were later removed from the model to reduce redundant information (or multicollinearity).
 
 Homes described as “Excellent” (+30%), “Luxury” (+43%), or “Mansion” (+70%) naturally correlated with price increases, while poor home condition was reflected by a 36% decrease in home value. Positive descriptions of home condition were not as impacting as negative ones.
 
-To make it easier to act on these findings, we can compare estimated and actual prices to show homes which seem like good deals. The 500 estimated “best deals” were colored by this value and displayed on an interactive map which could be shared or built into applications:
+To make it easier to act on these findings, we can compare estimated prices with actual list prices to show homes which seem like good deals. The 500 estimated “best deals” were colored by this value and displayed on an interactive map which could be shared or built into applications:
 
 ![Interesting Real Estate Map](https://github.com/thegrandblooms/dsc-phase-2-project-v2-3/blob/69ce930c1a72a00b77b9be88a732131b8b09b117/Graphics/Interesting_properties.png)
 
