@@ -1,8 +1,6 @@
 ![Map with Price Data Header](https://github.com/thegrandblooms/dsc-phase-2-project-v2-3/blob/68f06f1770bb0b4f79a4c7864f9349ed9b9a39a2/Graphics/price_map_header.jpg)
 ### Seattle Real-Estate Analysis
 
-Author: Blake McMeekin
-
 ## Overview
 
 The main focus of this project was to use multi-linear regression in a professional level analysis and presentation. The goal was to create a predictive model for real-estate valuation which could be used to help make purchasing decisions. If the predictive model imagines that a house should cost $500,000 and instead the list is $300,000, this could be forwarded to decisionmakers for further analysis because there's the potential to profit $200,000 (+- the accuracy of the model). There are some obvious dangers to this kind of decisionmaking if it's automated, but the goal here is merely to filter down the number of choices to allow humans to vet the remaining options.
@@ -11,7 +9,7 @@ The pipeline here filters, cleans, and processes data using Python, transforms n
 
 ## Business Problem
 
-The problem here is, how do you decide which homes to buy/invest in? There is lots of opportunity in real-estate, but making decisions with an abundance of choice and information can be overwhelming. We can't entirely automate the process, but we might be able to make tools and find predictors that make the decisionmaking easier for humans.
+How do you decide which homes to buy or invest in? There is of course endless of opportunity in real-estate, but making decisions in such complex, multidimensional spaces can be overwhelming. We can't entirely automate the process, but we might be able to make tools and find predictors that make the decisionmaking easier for humans.
 
 ## Data
 
